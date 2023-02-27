@@ -1,0 +1,75 @@
+package lista2;
+
+import javax.swing.JOptionPane;
+
+/*
+Escreva um programa que leia um número inteiro e apresente um menu para o usuário escolher:
+- Verificar se o número é múltiplo de algum outro número (pedir ao usuário esse número);
+- Verificar se o número é par;
+- Verificar se o número está entre 0 e 1000;
+- Sair.
+
+	Após as entradas de dados, deve ser mostrado ao usuário o resultado da respectiva opção escolhida, e novamente o menu. 
+Para a opção “4- Sair”, utilize o comando System.exit(0);
+*/
+
+public class Exercicio3 {
+
+	public static void main(String[] args) {
+
+		int num1 = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe um número qualquer:"));
+
+		int num2 = 0;
+		int opcao = 0;
+
+		while (opcao != 4) {
+			opcao = Integer.parseInt(JOptionPane.showInputDialog(null,
+					"O que você deseja fazer com esse número:"
+							+ "\n 1 - Verificar se o número é múltiplo de algum outro número"
+							+ "\n 2 - Verificar se o número é par" + "\n 3 - Verificar se o número está entre 0 e 1000"
+							+ "\n 4 - Sair"));
+
+			switch (opcao) {
+			case 1:
+				num2 = Integer.parseInt(JOptionPane.showInputDialog(null,
+						"Forneça outro valor para validarmos se o número que você informou"
+								+ "\nanteriromente é ou não, múltiplo deste valor que você irá informar agora:"));
+
+				if (num1 % 2 == 0) {
+					JOptionPane.showMessageDialog(null, +num1 + " é múltiplo de " + num2 + "!");
+					// Quando meu Resto é igual a 0, meu número é inteiro!
+				} else {
+					JOptionPane.showMessageDialog(null, +num1 + " não é múltiplo de " + num2 + "!");
+				}
+				break;
+
+			case 2:
+				if (num1 % 2 == 0) {
+					JOptionPane.showMessageDialog(null, num1 + " é par!");
+				} else {
+					JOptionPane.showMessageDialog(null, num1 + " não é par!");
+				}
+				break;
+
+			case 3:
+				if ((num1 > 0) && (num1 < 1000)) {
+					JOptionPane.showMessageDialog(null, num1 + " está entre 0 e 1000!");
+				} else {
+					JOptionPane.showMessageDialog(null, num1 + " não está entre 0 e 1000!");
+				}
+				break;
+
+			case 4:
+				System.exit(0);
+				break;
+
+			default:
+				JOptionPane.showMessageDialog(null, "Opção inválida", "Erro", JOptionPane.WARNING_MESSAGE);
+				break;
+			}
+
+		}
+
+	}
+
+}

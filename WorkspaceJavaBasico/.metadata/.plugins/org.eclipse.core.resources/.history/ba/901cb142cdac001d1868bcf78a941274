@@ -1,0 +1,44 @@
+package metodos;
+
+import javax.swing.JOptionPane;
+
+/*
+Construa um programa inicial mais simples que solicitará apenas o ano de nascimento
+de 5 (cinco) pessoas e mostrará quais delas são a mais velha e a mais nova.
+*/
+
+public class Desafio1 {
+
+	// Função Principal do programa
+	public static void main(String[] args) {
+
+		// Declarando variáveis
+		int acumuladora = 0;
+		int pessoaMaisVelha = 0;
+		int pessoaMaisNova = 0;
+
+		// Utilizando estrutura de repetição FOR
+		for (int contadora = 0; contadora <= 5; contadora++) {
+			int ano = Integer.parseInt(JOptionPane.showInputDialog(null, "Qual o ano do seu nascimento?"));
+
+			acumuladora = ano + acumuladora;
+
+			// Validando quem é mais velho e quem é mais novo
+			if (acumuladora > ano) {
+			pessoaMaisVelha	= pessoaMaisVelha + 1;
+			} else {
+			pessoaMaisNova = pessoaMaisNova + 1;
+			}
+		}
+
+	}
+
+}
+
+/*
+ * Como é que eu posso identificar se uma variavel é maior ou menor do que
+ * outra?
+ * 
+ * R: Eu preciso guardar os falores fornecidos pelos usuários de alguma forma
+ */
+

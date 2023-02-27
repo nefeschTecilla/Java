@@ -1,0 +1,19 @@
+package metodos;
+
+import javax.swing.JOptionPane;
+
+/*
+Construa um programa inicial mais simples que solicitará apenas o ano de nascimento
+de 5 (cinco) pessoas e mostrará quais delas são a mais velha e a mais nova.
+*/
+
+
+public class Desafio1 {
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}

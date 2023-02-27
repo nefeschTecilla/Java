@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\brjonsmtecil\OneDrive - Orbia\Área de Trabalho\WorkspaceSilvio\.metadata\.plugins\org.eclipse.jdt.core
+4262996998.index
+1865797976.index
+2851645811.index
